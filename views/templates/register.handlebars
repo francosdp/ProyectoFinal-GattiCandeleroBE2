@@ -1,1 +1,41 @@
-<h1>Register</h1>
+<div class="container d-flex justify-content-center aling-items-center vh-110">
+<div class="card p-4 shadow-sm cardRegister">
+    <h2 class="text-center">Registrarse</h2>
+
+    <form action="/api/sessions/register" id="registerForm" method="post">
+
+    <div class="mb-3">
+        <label for="first_name" class="form-label">Nombre</label>
+        <input type="text"class="form-control"name="first_name" required placeholder="Ingresa tu Nombre"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="last_name" class="form-label">Apellido</label>
+        <input type="text"class="form-control"name="last_name" required placeholder="Ingresa tu Apellido"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email"class="form-control"name="email" required placeholder="Ingresa tu Email"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="age" class="form-label">Edad</label>
+        <input type="number"class="form-control"name="age" required placeholder="Ingresa tu Edad"/>
+    </div>
+
+    <div class="mb-3">
+        <label  for="password"  class="form-label" placeholder="Ingrese contraseña" >Password</label>
+        <input type="password" class="form-control" name="password" required placeholder="Ingrese una contraseña"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+
+
+    <div class="text-center mt-3">
+        <button class="btn btn-ligth w-100"><a href="/api/sessions/viewLogin">Si ya posee una cuenta de clic aquí para Iniciar Sesión</a></button>
+    </div>
+
+    </form>
+</div>
+</div>

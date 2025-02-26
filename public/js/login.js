@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const userData = Object.fromEntries(formData)
 
         try {
-console.log("Hola Try")
+
             const response = await fetch('http://localhost:9090/api/sessions/login', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

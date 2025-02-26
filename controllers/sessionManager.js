@@ -31,12 +31,12 @@ export const login = async (req, res) => {
 export const register = async (req, res) => {
     try {
         if (!req.user) {
-            return res.status(400).send("El usuario ya se encuentra registrado")
+            return res.status(400).send({message:"El usuario ya se encuentra registrado"})
         }
-        return res.status(201).send("Te has registrado con éxito")
+        return res.status(201).send({message:"Te has registrado con éxito"})
     } catch (e) {
         console.log("Error en Manager Register", e)
-        res.status(500).send("Error al registrar el usuario")
+        res.status(500).send({message:"Error al registrar el usuario"})
     }
 }
 
@@ -60,11 +60,16 @@ export const gitHubLogin = (req, res) => {
 
 
 export const viewRegister = (req, res) => {
-    res.status(200).render('templates/register', {})
+    res.status(200).render('templates/register', {
+        title:"Registrarse",
+        url_js: "/js/register.js",
+        url_css: "/css/register.css"
+    })
 }
 
 export const viewLogin = (req, res) => {
     res.status(200).render('templates/login', {
+        title:"Iniciar Sesion",
         url_js: "/js/login.js",
         url_css: "/css/login.css"
     })
