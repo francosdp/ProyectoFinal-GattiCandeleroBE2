@@ -24,7 +24,7 @@
             {{/if}}
             {{#each products.pageNumbers}}
             <li class="page-item {{#if this.isCurrent}}active {{/if}}">
-                <a class="page-link" href="?page={{this.number}}&limit={{products.limit}}">{{this.number}}</a>
+                <a class="page-link" href="?page={{this.number}}&limit={{../products.limit}}">{{this.number}}</a>
             </li>
             {{/each}}
             {{#if products.hasNextPage}}

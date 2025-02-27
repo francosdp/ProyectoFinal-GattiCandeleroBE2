@@ -4,10 +4,16 @@ export const getProducts = async (req, res) => {
     try {
         const { limit, page, metFilter, filter, metOrder, ord } = req.query
         const askedPage = page !== undefined ? page : 1
-        const askedLimit = limit !== undefined || limit !== null ? limit : 10
+        const askedLimit = (limit === undefined || limit === null) ? 10 : limit;
         const filQuery = metFilter !== undefined ? { [metFilter]: filter } : {}
         const ordQuery = metOrder !== undefined ? { metOrder: ord } : {}
         const products = await productModel.paginate(filQuery, { limit: askedLimit, page: askedPage, ordQuery, lean: true })
+
+
+        console.log(askedPage);
+        
+        console.log(products.limit);
+        
 
         products.pageNumbers = Array.from({ length: products.totalPages }, (_, i) => ({
             number: i + 1,
