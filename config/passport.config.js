@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import passport from "passport";
 import local from 'passport-local'
 import GitHubStrategy from 'passport-github2'
@@ -78,7 +79,7 @@ const inizializatePassport = () => {
 
     passport.use('github', new GitHubStrategy({
         clientID: 'Iv23lieub4qiDEushTBh',
-        clientSecret: '65a4e8ba2bb7556b76b9acc85f99e0f2bd62e76c',
+        clientSecret: process.env.SECRET_GITHUB,
         callbackURL: "http://localhost:9090/api/sessions/githubcallback"
     }, async (accessToken, refreshToken, profile, done) => {
         try {
@@ -108,7 +109,7 @@ const inizializatePassport = () => {
 
     passport.use('jwt', new JWTStrategy({
         jwtFromRequest: ExtractJWT.fromExtractors([cookieReader]),
-        secretOrKey: "usersecret",
+        secretOrKey: process.env.SECRET_JWT,
     }, async (jwt_payload, done) => {
         try {
             return done(null, jwt_payload)

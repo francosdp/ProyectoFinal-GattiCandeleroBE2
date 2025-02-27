@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express'
 import path from 'path'
 import { __dirname } from './path.js'
@@ -27,19 +28,19 @@ const hbs=create()
 
 
 app.use(express.json())
-app.use(cookieParser())
+app.use(cookieParser(process.env.SECRET_COOKIE))
 app.use(session({
 store:MongoStore.create({
-    mongoUrl: "mongodb+srv://Franco:fransdp.atlas@cluster0.ei50y.mongodb.net/BackEnd2?retryWrites=true&w=majority&appName=Cluster0",
+    mongoUrl: process.env.URL_MONGO,
     mongoOptions:{},
     ttl:15
 }),
-secret:'SessionSecret',
+secret:process.env.SECRET_SESSION,
 resave:true,
 saveUninitialized:true
 }))
 
-mongoose.connect("mongodb+srv://Franco:fransdp.atlas@cluster0.ei50y.mongodb.net/BackEnd2?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.URL_MONGO)
 .then(()=>console.log("DB ON"))
 .catch((e)=>console.log("Error to DB: ", e))
 
