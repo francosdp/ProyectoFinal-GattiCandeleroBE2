@@ -8,9 +8,7 @@ import mongoose from 'mongoose'
 import passport from 'passport'
 import inizializatePassport from './config/passport.config.js'
 import { create } from 'express-handlebars'
-import cartRouter from './routes/carts.routes.js'
-import sessionRouter from './routes/session.routes.js'
-import productRouter from './routes/products.routes.js'
+import indexRouter from './routes/index.routes.js'
 import cookieParser from 'cookie-parser'
 
 
@@ -62,11 +60,7 @@ app.set(`views`, path.join(__dirname,'views'))
 
 
 app.use(express.static(path.join(__dirname ,"public")))
-
-app.use('/api/sessions',sessionRouter)
-app.use('/api/products',productRouter)
-app.use('/api/carts',cartRouter)
-
+app.use('/',indexRouter)
 
 
 
