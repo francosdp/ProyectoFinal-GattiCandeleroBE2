@@ -6,12 +6,3 @@ export const createToken = (user) => {
     return jwtToken
 }
 
-console.log("JWT=" , createToken(
-    {
-            email:"Franco@mail.com",
-            password: "Franco123",
-            first_name:"Franco",
-            last_name:"Juez",
-            age:24
-    }
-))

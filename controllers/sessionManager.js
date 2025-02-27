@@ -18,7 +18,7 @@ export const login = async (req, res) => {
         res.status(200).cookie('UserLog', jwtToken, {
             httpOnly: true,
             secure: false,
-            maxAge: 86400000
+            maxAge: 864000000
         }).send({message:"Logueado"})
 
 
@@ -50,7 +50,7 @@ export const gitHubLogin = (req, res) => {
         res.status(200).cookie('UserLog', jwtToken, {
             httpOnly: true,
             secure: false,
-            maxAge: 86400000
+            maxAge: 8640000
         }).redirect('/api/products')
     } catch (e) {
         console.log("Error en Manager GitHub", e)

@@ -31,7 +31,7 @@ app.use(session({
 store:MongoStore.create({
     mongoUrl: process.env.URL_MONGO,
     mongoOptions:{},
-    ttl:15
+    ttl:15000000 // El TTL lo dejé asi para realizar tests sin la necesidad de relogear cada 2 min
 }),
 secret:process.env.SECRET_SESSION,
 resave:true,
