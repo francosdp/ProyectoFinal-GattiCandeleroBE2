@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.main{
+    background-color: rgb(211, 189, 233);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-home{
+    background-color: rgb(211, 189, 233);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardLogin{
+    width: 360px;
+}
+
+.registerForm{
+    width: 720px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sections */
+.promo:hover {
+    background-color: #eadfb4bf;
+}
+
+.promo {
+    padding: 9px;
+    text-align: center;
+    background-color: #eadfb4;
+}
+
+.novedad:hover {
+    font-weight: bolder;
+}
+
+.novedad {
+    text-decoration: none;
+    color: black;
+}
+
+.center-item {
+    background-color: #010400;
+    text-align: center;
+    color: transparent;
+    padding: 25px;
+}
+
+.navbar {
+    padding: 0;
+    background-color:#5ca4a9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.navbar .container-fluid {
+    background-color:#5ca4a9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar-brand:hover {
+    font-size: 19.5px;
+    font-weight: bolder;
+}
+
+.nav-link:hover {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.dropdown-item:hover {
+    font-size: 16px;
+    font-weight: bolder;
+    box-shadow: -2px 1px 45px 66px rgba(127, 149, 209, 0.65) inset;
+    -webkit-box-shadow: -2px 1px 45px 66px rgba(127, 149, 209, 0.65) inset;
+    -moz-box-shadow: -2px 1px 45px 66px rgba(127, 149, 209, 0.65) inset;
+}
+
+
+
+
+
+footer{
+    width: 100%;
+}
+
+footer #bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color:#5ca4a9;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer .newsletter p{
+    font-size: small;
+    margin-left: 10px;
+    color: #010400;
+}
+
+footer .newsletter a {
+    color: #010400;
+}
+
+footer .newsletter-title h4 {
+    margin-left: 10px;
+    color: #010400;
+
+}
+
+footer .newsletter-form {
+    margin-left: 10px;
+}
+
+footer .newsletter-form input {
+    margin: 3px;
+}
+
+footer .social {
+    text-align: right;
+    margin-right: 10px;
+}
+
+footer .social a img:hover {
+    width: 55px;
+    height: 55px;
+}
+
+footer .facebook {
+    width: 50px;
+    height: 45px;
+}
+
+footer .social a img {
+    width: 50px;
+    height: 48px;
+}
+footer .social h4{
+    color: #010400;
+
+}
+
+footer .to-top {
+    background-color: #000000;
+    text-align: center;
+    padding: 15px;
+    font-size: large;
+}
+
+footer .to-top a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .to-top:hover {
+    font-weight: bolder;
+    font-size: 20px;
+}

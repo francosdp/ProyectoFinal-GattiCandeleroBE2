@@ -1,0 +1,106 @@
+
+<section name="body" class="main">
+<header>
+    <link rel="stylesheet" href="/css/login.css">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Midore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Destacados</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="">Tecnología</a></li>
+                            <li><a class="dropdown-item" href="">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<section name="main-container" class="container d-flex justify-content-center aling-items-center vh-110">
+<div class="card p-4 shadow-sm cardLogin">
+    <h2 class="text-center">Iniciar Sesion</h2>
+
+    <form action="/api/sessions/login" id="loginForm" method="post">
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email"class="form-control"name="email" required placeholder="Ingrese email"/>
+    </div>
+
+    <div class="mb-3">
+        <label  for="password"  class="form-label" placeholder="Ingrese contraseña" >Password</label>
+        <input type="password" class="form-control" name="password" required placeholder="Ingrese contraseña"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Iniciar Sesion</button>
+
+
+    <div class="text-center mt-3">
+        <button class="btn btn-dark w-100"><a href="/api/sessions/github">Iniciar Sesion con Github</a></button>
+
+        <button class="btn btn-ligth w-100"><a href="/api/sessions/viewRegister">Registrarse</a></button>
+    </div>
+
+    </form>
+</div>
+</section>
+<footer>
+    <link rel="stylesheet" href="/css/sections.css">
+  <div id="bottom">
+
+<div class="newsletter">
+    <div class="newsletter-title">
+    <h4>¿Quieres suscribirte a nuestro newsletter?</h4>
+    </div>
+    <div class="newsletter-form">
+    <form action="#" method="get">
+        <input type="text" placeholder="Nombre" name="first-name" />
+        <input type="text" placeholder="Escribe tu mail" name="mail" />
+        <input type="checkbox" name="accept" />
+        <input type="submit" value="Enviar" />
+    </form>
+</div>
+<p>Al presionar el botón "Envíar" estas aceptando nuestras <a href=""><strong>Políticas de publicidad e información.</strong></a></p>
+</div>
+    
+    
+    
+    
+    <div class="social">
+      <h4>¡¡Siguenos en nuestras redes para enterarte todas las novedades!!</h4>
+      <a href=""><img
+          class="facebook"
+          src="/resources/icons8-facebook.svg"
+          alt="facebook"
+        /></a>
+      <a href=""><img
+          src="/resources/icons8-instagram.svg"
+          alt="instagram"
+        /></a>
+    </div>
+  </div>
+  <div class="to-top"><a href="">Volver a Inicio</a></div>
+</footer>
+</section>
+
