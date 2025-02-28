@@ -7,6 +7,7 @@ import { __dirname } from "../path.js";
 
 const indexRouter = Router()
 
+
 indexRouter.use('/api/sessions',sessionRouter)
 indexRouter.use('/api/products',productRouter)
 indexRouter.use('/api/carts',cartRouter)

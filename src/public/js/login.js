@@ -17,13 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const data = await response.json()
+            
+            
 
             if (data.message=="Logueado"){
                 alert("Usuario Logueado")
                 window.location.href = "http://localhost:9090/api/products"
             }
             else {
-                console.log(data)
+                alert("El mail y/o contraseña son incorrectos.")
+                document.getElementById('inputMail').value=''
+                document.getElementById('inputPass').value=''
+
             }
 
         } catch (e) {

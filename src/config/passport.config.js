@@ -21,21 +21,6 @@ const cookieReader = (req) => {
     return jwtToken
 }
 
-export const passportCall = (strategy) => {
-    return async (req, res, next) => {
-
-        passport.authenticate(strategy, function (err, user, info) {
-            if (err) return next(err)
-
-            if (!user) {
-                return res.status(401).send({ error: info.messages ? info.messages : info.toString() })
-            }
-            req.user = user
-            next()
-        }(req, res, next))
-    }
-}
-
 const inizializatePassport = () => {
 
     passport.use('register', new localStrat({ passReqToCallback: true, usernameField: 'email' }, async (req, email, password, done) => {
@@ -68,7 +53,7 @@ const inizializatePassport = () => {
             if (user && PassValidation(password, user.password)) {
                 return done(null, user)
             } else {
-                return done(null, false)
+                return done(null,false,{ message: 'Correo o contraseña incorrectos' })
             }
         } catch (e) {
             console.log("Error de Login", e)

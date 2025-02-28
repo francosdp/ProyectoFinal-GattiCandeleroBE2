@@ -13,7 +13,7 @@ export const getProducts = async (req, res) => {
             number: i + 1,
             isCurrent: i + 1 === products.page
         }))
-        res.status(200).render('templates/home', { products })
+        res.status(200).render('templates/products', { products })
     } catch (e) {
         console.log("Error en getProducts getAll", e)
         res.status(500).render('templates/error', { e })

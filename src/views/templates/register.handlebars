@@ -1,118 +1,174 @@
-
 <section name="body" class="main">
-<header>
-    <link rel="stylesheet" href="/css/login.css">
+  <header>
+    <link rel="stylesheet" href="/css/login.css" />
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">Midore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Destacados</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Tecnología</a></li>
-                            <li><a class="dropdown-item" href="">Accesorios</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:9090/">TiendaNombre</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href=""
+              >Destacados</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Productos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">Tecnología</a></li>
+                <li><a class="dropdown-item" href="">Accesorios</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-success" type="submit">Buscar</button>
+          </form>
         </div>
+      </div>
     </nav>
-</header>
-<section name="main-container" class="container d-flex justify-content-center aling-items-center vh-110">
-<div class="card p-4 shadow-sm cardRegister">
-    <h2 class="text-center">Registrarse</h2>
+  </header>
+  <section
+    name="main-container"
+    class="container d-flex justify-content-center aling-items-center vh-110"
+  >
+    <div class="card p-4 shadow-sm cardRegister"id="registerForm" >
+      <h2 class="text-center">Registrarse</h2>
 
-    <form action="/api/sessions/register" id="registerForm" method="post">
+      <form action="/api/sessions/register"  method="post">
 
-    <div class="mb-3">
-        <label for="first_name" class="form-label">Nombre</label>
-        <input type="text"class="form-control"name="first_name" required placeholder="Ingresa tu Nombre"/>
+        <div class="mb-3">
+          <label for="first_name" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            name="first_name"
+            required
+            placeholder="Ingresa tu Nombre"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="last_name" class="form-label">Apellido</label>
+          <input
+            type="text"
+            class="form-control"
+            name="last_name"
+            required
+            placeholder="Ingresa tu Apellido"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            required
+            placeholder="Ingresa tu Email"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="age" class="form-label">Edad</label>
+          <input
+            type="number"
+            class="form-control"
+            name="age"
+            required
+            placeholder="Ingresa tu Edad"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            for="password"
+            class="form-label"
+            placeholder="Ingrese contraseña"
+          >Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            required
+            placeholder="Ingrese una contraseña"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+
+        <div class="text-center mt-3">
+          <button class="btn btn-ligth w-100"><a
+              href="/api/sessions/viewLogin"
+            >Si ya posee una cuenta de clic aquí para Iniciar Sesión</a></button>
+        </div>
+
+      </form>
     </div>
+  </section>
+  <footer>
+    <link rel="stylesheet" href="/css/sections.css" />
+    <div id="bottom">
 
-    <div class="mb-3">
-        <label for="last_name" class="form-label">Apellido</label>
-        <input type="text"class="form-control"name="last_name" required placeholder="Ingresa tu Apellido"/>
+      <div class="newsletter">
+        <div class="newsletter-title">
+          <h4>¿Quieres suscribirte a nuestro newsletter?</h4>
+        </div>
+        <div class="newsletter-form">
+          <form action="#" method="get">
+            <input type="text" placeholder="Nombre" name="first-name" />
+            <input type="text" placeholder="Escribe tu mail" name="mail" />
+            <input type="checkbox" name="accept" />
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+        <p>Al presionar el botón "Envíar" estas aceptando nuestras
+          <a href=""><strong>Políticas de publicidad e información.</strong></a></p>
+      </div>
+
+      <div class="social">
+        <h4>¡Siguenos en nuestras redes para enterarte todas las novedades!</h4>
+        <a
+          href="https://i.kym-cdn.com/entries/icons/facebook/000/045/844/zuckrberg_window.jpg"
+        ><img
+            class="facebook"
+            src="/resources/icons8-facebook.svg"
+            alt="facebook"
+          /></a>
+        <a
+          href="https://miro.medium.com/v2/resize:fit:1200/1*L17cV5QipasLjL_0mcgI0Q.jpeg"
+        ><img src="/resources/icons8-instagram.svg" alt="instagram" /></a>
+      </div>
     </div>
-
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email"class="form-control"name="email" required placeholder="Ingresa tu Email"/>
-    </div>
-
-    <div class="mb-3">
-        <label for="age" class="form-label">Edad</label>
-        <input type="number"class="form-control"name="age" required placeholder="Ingresa tu Edad"/>
-    </div>
-
-    <div class="mb-3">
-        <label  for="password"  class="form-label" placeholder="Ingrese contraseña" >Password</label>
-        <input type="password" class="form-control" name="password" required placeholder="Ingrese una contraseña"/>
-    </div>
-
-    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
-
-
-    <div class="text-center mt-3">
-        <button class="btn btn-ligth w-100"><a href="/api/sessions/viewLogin">Si ya posee una cuenta de clic aquí para Iniciar Sesión</a></button>
-    </div>
-
-    </form>
-</div>
-</section>
-<footer>
-    <link rel="stylesheet" href="/css/sections.css">
-  <div id="bottom">
-
-<div class="newsletter">
-    <div class="newsletter-title">
-    <h4>¿Quieres suscribirte a nuestro newsletter?</h4>
-    </div>
-    <div class="newsletter-form">
-    <form action="#" method="get">
-        <input type="text" placeholder="Nombre" name="first-name" />
-        <input type="text" placeholder="Escribe tu mail" name="mail" />
-        <input type="checkbox" name="accept" />
-        <input type="submit" value="Enviar" />
-    </form>
-</div>
-<p>Al presionar el botón "Envíar" estas aceptando nuestras <a href=""><strong>Políticas de publicidad e información.</strong></a></p>
-</div>
-    
-    
-    
-    
-    <div class="social">
-      <h4>¡¡Siguenos en nuestras redes para enterarte todas las novedades!!</h4>
-      <a href=""><img
-          class="facebook"
-          src="/resources/icons8-facebook.svg"
-          alt="facebook"
-        /></a>
-      <a href=""><img
-          src="/resources/icons8-instagram.svg"
-          alt="instagram"
-        /></a>
-    </div>
-  </div>
-  <div class="to-top"><a href="">Volver a Inicio</a></div>
-</footer>
+    <div class="to-top"><a href="">Volver a Inicio</a></div>
+  </footer>
 </section>

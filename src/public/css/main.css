@@ -3,31 +3,80 @@
     margin: 0;
 }
 
-
-.main{
-    background-color: rgb(211, 189, 233);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.main-home{
-    background-color: rgb(211, 189, 233);
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.cardLogin{
+/* Pages */
+/* login */
+.cardLogin {
     width: 360px;
+    margin-bottom: 25px;
 }
 
-.registerForm{
-    width: 720px;
+/* Register */
+#registerForm {
+    width: 600px;
+    margin-bottom: 25px;
 }
+
+
+/* LandingPage */
+
+
+.main-home {
+    width: 100%;
+    background-color: #F7A072;
+
+}
+
+main .products .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px 2px #51515195;
+    margin: 10px 0px;
+    background-color: #6CA6C1;
+}
+
+main .products .product-info p {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    margin-top: 0px 10px;
+}
+
+main .products .product-info h3 {
+    font-family: "STIX Two Text", serif;
+    font-size: 26px;
+    font-weight: lighter;
+}
+
+main .products .product-info button {
+    background-color: rgba(0, 0, 0, 0.258);
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px #51515195;
+    margin-bottom: 10px;
+}
+
+main .products .product-info button:hover {
+    font-weight: bolder;
+    background-color: #0104002a;
+}
+
+main .products .banner-img img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -79,6 +128,28 @@
 
 
 /* Sections */
+
+.main {
+    background-color: #F7A072;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-products {
+    background-color: #F7A072;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+/* Header */
 .promo:hover {
     background-color: #eadfb4bf;
 }
@@ -86,7 +157,7 @@
 .promo {
     padding: 9px;
     text-align: center;
-    background-color: #eadfb4;
+    background-color: #6CA6C1;
 }
 
 .novedad:hover {
@@ -99,15 +170,20 @@
 }
 
 .center-item {
-    background-color: #010400;
+    background-color: #18151E;
     text-align: center;
     color: transparent;
     padding: 25px;
 }
 
+#logo {
+    height: 180px;
+    width: 200px;
+}
+
 .navbar {
     padding: 0;
-    background-color:#5ca4a9;
+    background-color: #A22C29;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -115,7 +191,7 @@
 }
 
 .navbar .container-fluid {
-    background-color:#5ca4a9;
+    background-color: #A22C29;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -143,19 +219,46 @@
 
 
 
-footer{
+
+
+
+/* Footer */
+
+footer .eboutique {
+    background-color: #FFBF00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .eboutique h2 {
+    text-align: center;
+    font-family: "STIX Two Text", serif;
+    color: white;
+    font-size: 50px;
+}
+
+footer .eboutique p {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: lighter;
+}
+
+
+
+footer {
     width: 100%;
 }
 
 footer #bottom {
     display: flex;
     justify-content: space-between;
-    background-color:#5ca4a9;
+    background-color: #A22C29;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-footer .newsletter p{
+footer .newsletter p {
     font-size: small;
     margin-left: 10px;
     color: #010400;
@@ -198,7 +301,8 @@ footer .social a img {
     width: 50px;
     height: 48px;
 }
-footer .social h4{
+
+footer .social h4 {
     color: #010400;
 
 }

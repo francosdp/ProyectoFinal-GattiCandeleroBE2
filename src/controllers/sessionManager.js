@@ -1,17 +1,18 @@
 import { createToken } from "../utils/jwt.js"
+import { PassValidation } from "../utils/bcrypt.js";
 
 
 export const login = async (req, res) => {
     try {
-        if (!req.user) {
-            return res.status(401).send("Credenciales Inválidas")
-        }
+        if (!req.user) {  
+            return res.status(401).send({ message: "Incorrect" });
+    }
         const jwtToken = createToken(req.user)
         req.session.user = {
             email: req.user.email,
             first_name: req.user.first_name
         }
-
+       
 
 
 

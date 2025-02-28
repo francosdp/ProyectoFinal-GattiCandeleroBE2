@@ -66,7 +66,7 @@ app.use('/',indexRouter)
 
 
 app.get('/', (req,res)=>{
-    res.status(200).send("Hola desde el Servidor")
+    res.status(200).render("templates/landing")
 })
 
 app.listen(PORT, ()=>{
