@@ -75,3 +75,11 @@ export const viewLogin = (req, res) => {
         url_css: "/css/main.css"
     })
 }
+
+export const userPlatform =(req,res)=>{
+res.status(200).render('templates/userplatform',{
+    title:"BackOffice",
+    url_js:"/js/userplatform",
+    url_css:"/css/main.css"
+})
+}

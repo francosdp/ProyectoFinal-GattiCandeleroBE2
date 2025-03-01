@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (data.message=="Te has registrado con éxito"){
                 alert("Te has registrado con éxito")
-                window.location.href = "http://localhost:9090/api/sessions/viewLogin"
+                window.location.href = "http://localhost:9090/api/sessions/userplatform"
             }
             else {
                 console.log(data)
